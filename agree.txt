@@ -11,3 +11,14 @@
 				
 			}
 		});
+/* 선택체크가 모두 체크가 되면 전체체크버튼 True
+		   선택체크가 하나라도 체크해제이면 전체체크버튼 False */
+		$('.ckboxs').on('click',function(){
+			var ckLen = $('.ckboxs:checkbox:checked').length;
+//			console.log(ckLen);
+			if(ckLen != 5){
+				$('#cbox').prop('checked',false);
+			} else{
+				$('#cbox').prop('checked',true);
+			}
+		});

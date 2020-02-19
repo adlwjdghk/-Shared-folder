@@ -1,0 +1,13 @@
+	/* 전체동의 클릭시 전체 체크 or 전체체크해제 */
+		$('#cbox').on('click',function(){
+			var flag = $(this).is(':checked'); /* 체크여부 Bool값 */
+//			console.log(flag);
+			/* checkbox를 선택해제할때 prop함수를 사용하기 
+			   다른 함수는 막혔음 */
+			if(flag == true){	
+				$('.ckbox').prop('checked',true); // 체크
+			} else {
+				$('.ckbox').prop('checked',false); // 체크 해제
+				
+			}
+		});
